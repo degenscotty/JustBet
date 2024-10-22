@@ -3,13 +3,27 @@ pragma solidity 0.8.17;
 
 interface IWlpManager {
     function wlp() external view returns (address);
+
     // function usdw() external view returns (address);
     // function vault() external view returns (IVault);
     // function cooldownDuration() external returns (uint256);
     // function getAumInUsdw(bool maximise) external view returns (uint256);
     // function lastAddedAt(address _account) external returns (uint256);
-    function addLiquidity(address _token, uint256 _amount, uint256 _minUsdw, uint256 _minWlp) external returns (uint256);
-    function addLiquidityForAccount(address _fundingAccount, address _account, address _token, uint256 _amount, uint256 _minUsdw, uint256 _minWlp) external returns (uint256);
+    function addLiquidity(
+        address _token,
+        uint256 _amount,
+        uint256 _minUsdw,
+        uint256 _minWlp
+    ) external returns (uint256);
+
+    function addLiquidityForAccount(
+        address _fundingAccount,
+        address _account,
+        address _token,
+        uint256 _amount,
+        uint256 _minUsdw,
+        uint256 _minWlp
+    ) external returns (uint256);
     // function removeLiquidity(address _tokenOut, uint256 _wlpAmount, uint256 _minOut, address _receiver) external returns (uint256);
     // function removeLiquidityForAccount(address _account, address _tokenOut, uint256 _wlpAmount, uint256 _minOut, address _receiver) external returns (uint256);
     // function setCooldownDuration(uint256 _cooldownDuration) external;
@@ -22,11 +36,10 @@ interface IWlpManager {
 
     // function maxPercentageOfWagerFee() external view returns(uint256);
     // function addLiquidityFeeCollector(
-    //     address _token, 
-    //     uint256 _amount, 
-    //     uint256 _minUsdw, 
+    //     address _token,
+    //     uint256 _amount,
+    //     uint256 _minUsdw,
     //     uint256 _minWlp) external returns (uint256 wlpAmount_);
-
 
     // /*==================== Events *====================*/
     // event AddLiquidity(
