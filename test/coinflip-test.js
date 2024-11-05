@@ -10,6 +10,6 @@ const { network, ethers, deployments } = require("hardhat")
               deployer = accounts[0]
 
               await deployments.fixture(["coinflip"])
-              basicNft = await ethers.getContract("CoinFlip")
+              coinFlip = await ethers.getContract("CoinFlip")
           })
       })
